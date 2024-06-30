@@ -26,11 +26,10 @@ def pedir_letra(letra):
 def chequear_letra(letra, palabra_secreta, lista):
     lista_letras_malas = []
 
-    for letter in palabra_secreta:
-
+    for indice,caracter in enumerate(palabra_secreta):
         if letra in palabra_secreta:
-            indice = palabra_secreta.index(letra)
-            lista[indice] = letra
+            if caracter == letra:
+                lista[indice] = letra
             print(x)
         else:
             lista_letras_malas.append(letra)
